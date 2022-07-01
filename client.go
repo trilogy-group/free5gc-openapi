@@ -514,7 +514,7 @@ func MultipartDeserialize(b []byte, v interface{}, boundary string) (err error) 
 		multipartBody := make([]byte, 1000)
 
 		// if no remian part, break this loop
-		if nextPart, err := r.NextPart(); err == io.EOF {
+		if nextPart, err := r.NextPart(); err != nil {
 			break
 		} else {
 			part = nextPart
