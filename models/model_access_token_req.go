@@ -12,6 +12,8 @@ package models
 type AccessTokenReq struct {
 	GrantType          string  `json:"grant_type" yaml:"grant_type" bson:"grant_type" mapstructure:"GrantType"`
 	NfInstanceId       string  `json:"nfInstanceId" yaml:"nfInstanceId" bson:"nfInstanceId" mapstructure:"NfInstanceId"`
+	ClientId	   string  `json:"clientId" yaml:"clientId" bson:"clientId" mapstructure:"ClientId"`
+	ClientSecret	   string  `json:"clientSecret" yaml:"clientSecret" bson:"clientSecret" mapstructure:"ClientSecret"`
 	NfType             NfType  `json:"nfType,omitempty" yaml:"nfType" bson:"nfType" mapstructure:"NfType"`
 	TargetNfType       NfType  `json:"targetNfType,omitempty" yaml:"targetNfType" bson:"targetNfType" mapstructure:"TargetNfType"`
 	Scope              string  `json:"scope" yaml:"scope" bson:"scope" mapstructure:"Scope"`
